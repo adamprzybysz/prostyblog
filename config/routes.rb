@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 get 'posts/index'
 root 'posts#index', as:'home'
 get 'about' => 'pages#about', as:'about'
+get 'contact' => 'pages#contact', as:'contact'
 resources :posts do
 	resources :comments
 end
