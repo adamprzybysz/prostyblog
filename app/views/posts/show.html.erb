@@ -1,0 +1,17 @@
+<div class="container" style="margin-top: 60px">
+<h2><%= @post.title %></h2>
+<p><%= @post.body %></p>
+<hr>
+<%= link_to "Edytuj", edit_post_path(@post), :class => 'btn btn-secondary'%>
+<%= link_to "Usuń", post_path(@post), 
+method: :delete,
+data: {confirm: "Pewnyś?"},
+:class => 'btn btn-danger'%>
+<hr>
+
+
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>
+
+
+</div>
